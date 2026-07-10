@@ -1,103 +1,274 @@
-# MERN Daily Routine Dashboard
+# 🚀 MERN Daily Routine Dashboard
 
-A premium, production-ready MERN stack application designed to manage your daily routines. The dashboard automatically displays tasks based on the current system time, updates in real-time, and features a modern glassmorphism UI.
+A modern and responsive **Daily Routine Dashboard** built with the **MERN Stack** to help you organize, track, and complete your daily activities efficiently.
 
-## Features
+Designed with a premium **glassmorphism UI**, the application automatically detects the current task based on your system time, provides live progress tracking, and offers an intuitive drag-and-drop experience for managing routines.
 
-- **Real-Time Updates**: Automatically highlights the current task based on system time and updates every minute without page refreshes.
-- **Drag-and-Drop**: Easily reorder your tasks using `@dnd-kit`.
-- **Theming**: Premium glassmorphism design with automatic dark/light theme detection and manual toggle.
-- **Dynamic Greeting**: Welcomes you based on the time of day with a live clock.
-- **Task Management**: Full CRUD operations for tasks (Add, Edit, Delete, Mark Completed).
-- **Progress Tracking**: Daily completion percentage and progress bar.
-- **Categories & Priorities**: Organize tasks with custom colors and priority levels.
+Whether you're planning study sessions, workouts, meetings, or personal goals, this dashboard keeps your schedule organized with real-time updates and a clean user experience.
 
-## Tech Stack
+---
 
-### Frontend
-- **React (Vite)**
-- **Tailwind CSS v4** (with Glassmorphism styling)
-- **Lucide React** (Icons)
-- **Axios** (HTTP Client)
-- **React Router**
-- **Context API** (State Management)
-- **@dnd-kit** (Drag & Drop)
-- **React Hot Toast** (Notifications)
+## 📸 Screenshots
 
-### Backend
-- **Node.js & Express.js**
-- **MongoDB Atlas & Mongoose**
-- **Express Validator**
-- **Cors, Dotenv, Morgan**
+### Dashboard
 
-## Installation & Setup
+![Dashboard](docs/dashboard.png)
 
-### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB Atlas account (or local MongoDB server)
+### Add New Task
 
-### 1. Clone the repository
+![Task Modal](docs/task-modal.png)
+
+---
+
+# ✨ Features
+
+### 📅 Smart Routine Management
+- Create, edit, delete, and complete tasks
+- Automatic current task detection
+- Upcoming and completed task sections
+- Daily recurring tasks support
+
+### ⏰ Real-Time Updates
+- Live digital clock
+- Dynamic greeting based on current time
+- Automatically updates the active task without refreshing
+
+### 📊 Progress Tracking
+- Daily completion percentage
+- Visual progress bar
+- Task statistics dashboard
+- Completed task counter
+
+### 🎨 Premium User Interface
+- Glassmorphism-inspired design
+- Responsive layout
+- Dark/Light mode support
+- Smooth animations and transitions
+
+### 🎯 Task Organization
+- Categories
+- Priority levels
+- Custom color labels
+- Start & End time scheduling
+
+### 🖱️ Drag & Drop
+- Easily reorder tasks
+- Powered by **@dnd-kit**
+- Smooth drag animations
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React (Vite)
+- Tailwind CSS v4
+- React Router DOM
+- Axios
+- Context API
+- Lucide React Icons
+- React Hot Toast
+- @dnd-kit
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- Express Validator
+- Morgan
+- Cors
+- Dotenv
+
+---
+
+# 📂 Project Structure
+
+```
+Routine/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   └── .env
+│
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── .env
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## Prerequisites
+
+- Node.js (v18+)
+- MongoDB Atlas or Local MongoDB
+
+---
+
+## 1️⃣ Clone the Repository
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/yourusername/Routine.git
+
 cd Routine
 ```
 
-### 2. Backend Setup
-1. Navigate to the server directory:
-   ```bash
-   cd server
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables:
-   Create a `.env` file in the root directory (`Routine/.env`) and add:
-   ```env
-   NODE_ENV=development
-   PORT=5000
-   MONGODB_URI=your_mongodb_connection_string
-   ```
-4. Start the backend development server:
-   ```bash
-   npm run dev
-   ```
-   The server will run on `http://localhost:5000`.
+---
 
-### 3. Frontend Setup
-1. Open a new terminal and navigate to the client directory:
-   ```bash
-   cd client
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables:
-   Create a `.env` file in the `client` directory (`client/.env`) and add:
-   ```env
-   VITE_API_URL=http://localhost:5000/api
-   ```
-4. Start the frontend development server:
-   ```bash
-   npm run dev
-   ```
-   The app will open at `http://localhost:5173`.
+## 2️⃣ Backend Setup
 
-## Deployment
+Navigate to the server folder.
 
-### Frontend (Vercel)
-1. Push your code to a GitHub repository.
-2. Connect the repository to Vercel.
-3. Set the Root Directory to `client`.
-4. Ensure the Build Command is `npm run build` and Output Directory is `dist`.
-5. Add the `VITE_API_URL` environment variable pointing to your deployed backend URL.
+```bash
+cd server
+```
 
-### Backend (Render / Railway)
-1. Connect your repository to your chosen hosting provider.
-2. Set the Root Directory to `server`.
-3. Set the Start Command to `node server.js`.
-4. Add the necessary environment variables (`MONGODB_URI`, `NODE_ENV=production`).
+Install dependencies.
 
-## License
-MIT License
+```bash
+npm install
+```
+
+Create a `.env` file.
+
+```env
+NODE_ENV=development
+PORT=5000
+
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Start the backend.
+
+```bash
+npm run dev
+```
+
+Backend runs at
+
+```
+http://localhost:5000
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+Open another terminal.
+
+```bash
+cd client
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Create `client/.env`
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Run the frontend.
+
+```bash
+npm run dev
+```
+
+Open
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🚀 Deployment
+
+## Frontend (Vercel)
+
+- Push project to GitHub
+- Import repository into Vercel
+- Root Directory:
+
+```
+client
+```
+
+Build Command
+
+```
+npm run build
+```
+
+Output Directory
+
+```
+dist
+```
+
+Environment Variable
+
+```
+VITE_API_URL=https://your-backend-url/api
+```
+
+---
+
+## Backend (Render / Railway)
+
+Root Directory
+
+```
+server
+```
+
+Start Command
+
+```bash
+node server.js
+```
+
+Environment Variables
+
+```env
+NODE_ENV=production
+MONGODB_URI=your_mongodb_uri
+PORT=5000
+```
+
+---
+
+# 💡 Future Improvements
+
+- User Authentication (JWT)
+- Multiple Routine Profiles
+- Calendar View
+- Notifications & Reminders
+- Task Search & Filters
+- Weekly & Monthly Analytics
+- PWA Support
+- Mobile App Version
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+⭐ If you found this project helpful, consider giving it a **Star** on GitHub!
